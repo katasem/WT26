@@ -1,0 +1,37 @@
+body {
+    font-family: verdana;
+}
+
+header {
+    background-color: #AFAFAF;
+}
+
+h1 {
+    color: #0082D1;
+}
+
+h3 {
+    margin: 1em
+}
+
+footer {
+    background-color: #FF5F00;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
