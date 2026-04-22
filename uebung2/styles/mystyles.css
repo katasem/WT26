@@ -4,8 +4,19 @@ body {
 
 header {
     background-color: #AFAFAF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+header span {
+    font-weight: bold;
+    margin-right: 30px;
+}
+header img {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
 h1 {
     color: #0082D1;
 }
