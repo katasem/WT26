@@ -27,6 +27,8 @@ h3 {
 
 footer {
     background-color: #FF5F00;
+    text-align: center;
+    padding: 1px;
 }
 
 a:link {
@@ -45,4 +47,12 @@ a:hover {
 
 a:active {
     text-decoration: underline;
+}
+
+li {
+    border: 0.1rem outset rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
 }
