@@ -8,15 +8,18 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 header span {
     font-weight: bold;
-    margin-right: 30px;
+    margin-right: 0.5rem;
 }
+
 header img {
     width: 50px;
     height: auto;
     padding: 10px;
 }
+
 h1 {
     color: #0082D1;
 }
@@ -28,7 +31,7 @@ h3 {
 footer {
     background-color: #FF5F00;
     text-align: center;
-    padding: 1px;
+    padding: 0.1em;
 }
 
 a:link {
@@ -49,29 +52,39 @@ a:active {
     text-decoration: underline;
 }
 
+ul {
+    list-style-type: none;
+    /* Keine Aufzählungspunkte */
+    margin: 1rem;
+    /* Standard-Margin wird entfernt */
+    padding: 0;
+}
+
 li {
     border: 0.1rem outset rgb(0, 0, 0);
-    border-radius: 10px;
+    border-radius: 0.7rem;
     margin: 1%;
     padding: 1%;
     text-align: center;
 }
 
 main {
-    border: 8px solid black;
+    border: 8px solid black; /* border: zur Veranschaulichung, wie meine Flexbox aussieht */
     display: flex;
-    
+
     gap: 10px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     align-content: space-between;
-    
-} <!-- border: 8px solid black; zur Veranschaulichung, wie meine Flexbox aussieht-->
+
+}
+
+
 .box {
-    border: 5px solid red;
-display: flex;
-justify-content: center;
-align-items: center;
+    border: 5px solid red; /* border: zur Veranschaulichung, wie meine Flexbox aussieht */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
