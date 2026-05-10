@@ -1,5 +1,10 @@
 :root {
+    --htw-gruen: #76B900;
+    --htw-gruen-hell: #f9fcf4;
+    --htw-gruen-mittel: #edf5df;
+    --htw-blau: #0082D1;
     --htw-grau: #AFAFAF;
+    --htw-orange: #FF5F00;
 }
 
 html {
@@ -7,7 +12,8 @@ html {
 }
 
 body {
-    font-family: verdana;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -16,158 +22,175 @@ body {
 
 header {
     background-color: var(--htw-grau);
-    color: white;
-    /* Variante 1 mit Flexbox 
-   display: flex;
-    justify-content: space-between;
-    align-items: center; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    img {
+        width: 3rem;
+        margin: 0.5rem;
+    }
+
+    span {
+        text-align: right;
+
+        font-weight: bold;
+        margin: .5rem;
+        padding: .5rem;
+    }
 }
 
-header span {
-    font-weight: bold;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 0.5rem;
-    text-align: right;
+main h1 {
+    color: var(--htw-blau);
 }
 
-header img {
-    width: 2em;
-    height: auto;
-    padding: 1%;
-    /* meine Variante gewesen
-    width: 50px;
-    height: auto;
-    padding: 10px; */
-}
-
-h1 {
-    color: #0082D1;
-}
-
-h3 {
-    margin: 1em
-}
-
-footer {
-    background-color: #FF5F00;
-    text-align: center;
-    padding: 0.1em;
-    margin-top: auto;
-}
-
-ul>li :hover {
-    background-color: aquamarine;
-    box-shadow: green;
-}
-
-img {
-    width: 50%;
-}
-
-a {
-    color: var(--htw-grau);
-    text-decoration: none;
-    margin: auto;
-}
-
-a:link {
-    color: black;
-    text-decoration: none;
-}
-
-a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--htw-grau);
-    font-weight: bold;
-}
-
-a:active {
-    text-decoration: none;
+main h3 {
+    margin-left: 2rem;
 }
 
 ul {
     list-style-type: none;
-    /* Keine Aufzählungspunkte */
-    margin: 1rem;
-    /* Standard-Margin wird entfernt */
-    padding: 0;
+
+    li {
+        border: 2px solid black;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: .5rem;
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+        margin-left: -.4rem;
+        padding: .4rem;
+        width: 40vw;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: var(--htw-blau);
+        }
+
+        a:link {
+            text-decoration: none;
+            color: red;
+        }
+    }
+
+    li:hover {
+        background-color: rgb(191, 206, 191);
+        border-color: var();
+        color: green;
+        font-weight: bold;
+
+        a:visited {
+            color: green;
+        }
+
+        a:link {
+            color: green;
+        }
+    }
 }
 
-li {
-    border: 0.1rem outset rgb(0, 0, 0);
-    border-radius: 0.7rem;
-    margin: 1%;
-    padding: 1%;
-    text-align: center;
+main {
+    flex: 1;
+    background-color: var(--htw-gruen-hell);
+    padding-left: 1rem;/*Mein Abstand des Bodys links auf der Webseite*/
+
+    /*Wenn ich über dem Bild hovere, dann sehe ich Bildquelle/Copyright */
+    .img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-src {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--htw-blau);
+        color: white;
+        padding: 0.2rem;
+        font-size: 0.6rem;
+    }
+
+    .img-wrapper:hover img:hover + .img-src {
+        display: block;
+    }
 }
 
 #indexmain {
-    background-color: rgb(63, 152, 76);
     display: grid;
     grid-template-columns: 4fr 1fr;
 
-
-    /*   border: 8px solid black; /* border: zur Veranschaulichung, wie meine Flexbox aussieht */
-    /* display: flex;
-
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-*/
 }
 
-/* weil im plan kein aside besteht, kann man hier main lassen ansonsten #indexmain>aside */
-main>aside {
-    background-color: rgb(23, 154, 23);
-    text-align: center;
+aside {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.box {
-    border: 5px solid red;
-    /* border: zur Veranschaulichung, wie meine Flexbox aussieht */
-    /*  display: flex;
-    justify-content: center;
+    grid-template-rows: auto auto;
+    justify-items: center;
     align-items: center;
-*/
+    background-color: var(--htw-gruen-mittel);
+    text-align: center;
 }
-
+img {
+    width: 40%;
+}
 
 table {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-collapse: collapse;
-    width: 60%;
-    thead tr {
-        background-color: green;
-        padding: 10%;
+    width: 50%;
+
+    thead {
+        background-color: var(--htw-gruen);
+
+        tr th {
+            padding: .5rem;
+            text-align: start;
+        }
     }
 
-    tbody tr:nth-child(even) {
-        background-color: rgb(171, 171, 171);
+    tbody {
+
+        tr:nth-child(even) {
+            background-color: rgb(214, 214, 214);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(235, 234, 234);
+        }
     }
 
-    tbody tr:nth-child(odd) {
-        background-color: rgb(255, 228, 228);
-    }
-
-tbody tr:hover {
+    tbody tr:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-}
+    }
 
-    td, th {
+    td,
+    th {
         padding: 3%
     }
 
+}
+
+.plan-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--htw-blau);
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    /* Abstand zwischen der Tabelle und dem Button*/
+}
+
+.plan-btn:hover {
+    background-color: var(--htw-gruen);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--htw-orange);
+    text-align: center;
+    padding: 0.1em;
+    margin-top: auto;
 }
