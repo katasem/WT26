@@ -19,7 +19,7 @@ body {
     flex-direction: column;
 
 }
-
+/* Variante A
 header {
     background-color: var(--htw-grau);
     display: grid;
@@ -37,6 +37,25 @@ header {
         margin: .5rem;
         padding: .5rem;
     }
+}
+*/
+header {
+  height: 4rem;
+  background-color: var(--htw-grau);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  padding: 0 0.5rem;
+  img {
+  width: 3rem;
+}
+
+span {
+  justify-self: end;
+  font-weight: bold;
+}
 }
 
 main h1 {
@@ -181,6 +200,7 @@ table {
     text-decoration: none;
     margin-top: 2rem;
     /* Abstand zwischen der Tabelle und dem Button*/
+    transition: background-color 0.3s ease;
 }
 
 .plan-btn:hover {

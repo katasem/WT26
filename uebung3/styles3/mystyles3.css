@@ -1,2 +1,49 @@
 :root {
---}
+    --htw-gruen: #76B900;
+    --htw-gruen-hell: #f9fcf4;
+    --htw-gruen-mittel: #edf5df;
+    --htw-blau: #0082D1;
+    --htw-grau: #AFAFAF;
+    --htw-orange: #FF5F00;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100%;
+    margin: 0;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+header {
+    height: 4rem;
+    background-color: var(--htw-grau);
+
+    display: grid;
+    place-items: center;
+
+    padding: 0 0.5rem;
+
+    h2 {
+        margin: 0;
+    }
+    /*Überschriften haben standardmäßig eigene margin, deswegen entfernen wir es hier*/
+} 
+
+.citycard {
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+}
+
+footer {
+        background-color: var(--htw-orange);
+        text-align: center;
+        padding: 0.1rem;
+    }
