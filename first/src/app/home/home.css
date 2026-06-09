@@ -1,8 +1,7 @@
 #home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
     background-color: aqua;
     padding: 2%;
-    text-align: center;
+    
 
 }
