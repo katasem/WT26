@@ -1,0 +1,21 @@
+#nav {
+background-color: rgb(19, 18, 18);
+padding: 0.5rem;
+color: white;
+}
+
+ul li{
+    display: inline-block;
+    padding-right: 5rem;
+
+    a {
+        text-decoration: none;
+        color: rgb(229, 221, 221);
+    }
+
+    a:hover {
+        font-weight: bold;
+        font-size: large;
+        color: white;
+    }
+}
